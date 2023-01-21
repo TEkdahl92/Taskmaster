@@ -2,11 +2,12 @@
 
 .App {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2f74c0;
+  background-image: url(https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-concrete_1258-71629.jpg?w=1380&t=st=1674275102~exp=1674275702~hmac=e103c7a54656289a67cfb6780d76bf58a483a0804fb2fb3155a3379619db09eb);
+  background-size: cover;
   font-family: "Neucha", cursive;
 }
 
@@ -14,7 +15,7 @@
   text-transform: uppercase;
   font-size: 40px;
   margin: 30px 0;
-  color: white;
+  color: black;
   z-index: 1;
   text-align: center;
 }

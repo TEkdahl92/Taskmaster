@@ -1,6 +1,6 @@
 .input {
     display: flex;
-    width: 90%;
+    width: 95%;
     position: relative;
     align-items: center;
   }
@@ -29,7 +29,7 @@
     right: 0px;
     border: none;
     font-size: 15px;
-    background-color: #2f74c0;
+    background-color: rgb(0, 221, 236);
     color: white;
     transition: 0.2s all;
     box-shadow: 0 0 10px black;
@@ -44,21 +44,59 @@
     box-shadow: 0 0 5px black;
   }
   
-  .todos {
+  .container {
+    width: 95%;
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .todos {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+    padding: 15px;
+    background-color: rgba(205, 50, 50, 0.822);
+  }
+  
+  .dragactive {
+    background-color: rgb(0, 221, 236);
+  }
+  
+  .dragcomplete {
+    background-color: rgb(255, 38, 0);
+  }
+  
+  .remove {
+    background-color: rgba(205, 50, 50, 0.822);
+  }
+  
+  .todos__heading {
+    font-size: 30px;
+    /* text-align: center; */
+    color: black;
   }
   
   .todos__single {
     display: flex;
-    width: 29.5%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
-    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    background-image: url("https://img.freepik.com/free-photo/white-wooden-texture-flooring-background_53876-63634.jpg?w=1380&t=st=1674274539~exp=1674275139~hmac=8f0dba521427a88db4bbfd405bd23cf11c52bd6471c4a1310074ca8dfcddc857");
+    transition: 0.2s;
   }
+  
+  .drag {
+    box-shadow: 0 0 20px black;
+  }
+  
+  .todos__single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+  }
+  
   .todos__single--text {
     flex: 1;
     padding: 5px;
@@ -76,9 +114,9 @@
     cursor: pointer;
   }
   
-  @media (max-width: 1200px) {
-    .todos__single {
-      width: 40%;
+  @media (max-width: 1100px) {
+    .todos {
+      width: 45%;
     }
   }
   
@@ -86,10 +124,12 @@
     .input {
       width: 95%;
     }
+    .container {
+      width: 95%;
+      flex-direction: column;
+    }
     .todos {
       width: 95%;
-    }
-    .todos__single {
-      width: 100%;
+      margin-bottom: 10px;
     }
   }
